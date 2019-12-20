@@ -2,9 +2,11 @@
 // https://docs.begin.com/en/functions/http/
 //
 let begin = require('@architect/functions');
+let fetch = require('node-fetch');
 
 // HTTP function
 exports.handler = async function http(req) {
+  console.log('received request', req);
   if (
     req.queryStringParameters &&
     req.queryStringParameters.lat &&
@@ -14,12 +16,12 @@ exports.handler = async function http(req) {
     const lng = req.queryStringParameters.lng;
     const forecast = await fetch(
       `https://api.darksky.net/forecast/${DARK_SKY_API_KEY}/${lat},${lng}`
-    );
-    console.log(forecast);
+    ).then(res => res.json());
+    console.log('-----forecast-----\n', forecast.currently);
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json; charset=utf8' },
-      body: forecast
+      body: JSON.stringify(forecast.currently)
     };
   } else {
     return {

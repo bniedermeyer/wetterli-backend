@@ -7,5 +7,8 @@
   },
   "devDependencies": {
     "@architect/sandbox": "^1.4.16"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
   }
 }
