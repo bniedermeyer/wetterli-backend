@@ -1,2 +1,0 @@
-# wetterli-backend
-Begin app
