@@ -13,8 +13,9 @@ exports.handler = async function http(req) {
     const lat = req.queryStringParameters.lat;
     const lng = req.queryStringParameters.lng;
     const forecast = await fetch(
-      `https://api.darksky.net/forecast/${process.env.DARK_SKY_API_KEY}/${lat},${lng}`
+      `https://api.darksky.net/forecast/${DARK_SKY_API_KEY}/${lat},${lng}`
     );
+    console.log(forecast);
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json; charset=utf8' },
