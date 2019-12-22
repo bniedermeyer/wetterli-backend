@@ -1,16 +1,11 @@
-# Begin minimal app
-
+# Wetterli - Backend
 [![Begin build status](https://buildstatus.begin.app/shiny-rc2/status.svg)](https://begin.com)
 
-A very simple Begin app with the minimum necessary file structure to get going on Begin
+Cloud functions that power [Wetterli](https://github.com/bniedermeyer/wetterli)
 
----
-
-## Deploy your own
-
-Deploy your own clone of this app to Begin!
-
-[![Deploy to Begin](https://static.begin.com/deploy-to-begin.svg)](https://begin.com/apps/create?template=https://github.com/begin-examples/node-minimal)
+Tech Used: 
+- Begin functions
+- Dark Sky API
 
 ---
 
